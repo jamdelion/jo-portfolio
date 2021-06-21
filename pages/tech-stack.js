@@ -28,6 +28,7 @@ export default function Stack() {
                     <Icon name={'ES Lint'} id='eslint-icon'></Icon>
                     <Icon name={'Netlify'} id='netlify-icon'></Icon>
                     <Icon name={'Heroku'} id='heroku-icon'></Icon>
+                    <Icon name={'Vercel'} id='vercel-icon'></Icon>
                     <Icon name={'Figma'} id='figma-icon'></Icon>
                     <Icon name={'Jira'} id='jira-icon'></Icon>
                 </ul>

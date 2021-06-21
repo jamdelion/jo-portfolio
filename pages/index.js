@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Layout, { siteTitle } from '../components/layout'
+import Nav from '../components/nav'
 import utilStyles from '../styles/utils.module.css'
 import { getSortedPostsData } from '../lib/posts'
 import Link from 'next/link'
@@ -26,31 +27,7 @@ export default function Home({ allPostsData }) {
           (This is a work in progress - for now, please check out {' '}
           <a href="https://www.github.com/jamdelion">my GitHub</a>.)
         </p>
-       <h2>
-          <Link href="/about-me">
-            <a>About Me</a>
-          </Link>
-        </h2>
-        <h2>
-          <Link href="/my-work">
-            <a>My Work</a>
-          </Link>
-        </h2>
-        <h2>
-          <Link href="/tech-stack">
-            <a>Tech Stack</a>
-          </Link>
-        </h2>
-        <h2>
-          <Link href="/testimonials">
-            <a>Testimonials</a>
-          </Link>
-        </h2>
-        <h2>
-          <Link href="/contact-me">
-            <a>Contact Me</a>
-          </Link>
-        </h2>
+        <Nav></Nav>
       </section>
        <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>

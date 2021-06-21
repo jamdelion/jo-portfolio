@@ -54,3 +54,7 @@
 .viewheight {
     min-height: 100vh;
 }
+
+.flexrow {
+    display: flex;
+}
