@@ -1,9 +1,9 @@
 import Layout, { siteTitle } from '../components/layout'
 
-export default function Contact() {
+export default function Work() {
    return (
       <Layout>
-         <h1>Contact Me</h1>
+         <h1>My Work</h1>
       </Layout>	  
    )
 }

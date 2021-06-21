@@ -7,17 +7,12 @@ import Icon from '../components/tech-icon'
 
 export default function Stack() {
     return (
-       <Layout home>
+       <Layout>
         <Head>
             <title>{siteTitle}</title>
         </Head>
         <section className={utilStyles.viewheight}>
             <h1>Tech Stack</h1>
-            <h2>
-                <Link href="/">
-                <a>Home</a>
-                </Link>
-            </h2>
             {/* <h3 className="page__subtitle page__titles section-padding">Tech Stack</h3> */}
                 <ul className={styles.techstack__list}>
                     <Icon name={'HTML'} id='html-icon'></Icon>
