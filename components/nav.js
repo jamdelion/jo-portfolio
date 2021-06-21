@@ -2,7 +2,7 @@ import styles from './nav.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 
-export default function Nav({ children, home }) {
+export default function Nav() {
     return (
     <nav className={ styles.navbar } >
           <Link href="/about-me">

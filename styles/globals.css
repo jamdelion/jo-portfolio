@@ -1,3 +1,12 @@
+:root {
+  font-family: "Roboto", sans-serif;
+  --fontColor: black;
+  --background: #041549;
+  /* --accentColor: hsl(331, 100%, 58%); */
+  --accentColor: skyblue;
+  color: var(--fontColor);
+}
+
 html,
 body {
   padding: 0;
