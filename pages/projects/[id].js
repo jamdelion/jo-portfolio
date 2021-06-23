@@ -6,6 +6,8 @@ import utilStyles from '../../styles/utils.module.css'
 import Icon from '../../components/tech-icon'
 import styles from '../../components/project.module.css'
 import Link from 'next/link'
+import Image from 'next/image'
+
 
 export async function getStaticProps({ params }) {
   const projectData = await getFileData(params.id, projectsDirectory)
@@ -37,8 +39,7 @@ export default function Project({ projectData }) {
               <div className={styles.project_summary} dangerouslySetInnerHTML={{ __html: projectData.contentHtml }} />
                 
               <div className={styles.project_links}>
-              <a href={projectData.backend_link} target="_blank" rel="noopener noreferrer nofollow" title={`Go to ${projectData.name} backend repository`}>&lt;BE code&gt;</a>
-                <a href={projectData.frontend_link} target="_blank" rel="noopener noreferrer nofollow" title={`Go to ${projectData.name} frontend repository`}>&lt;FE code&gt;</a>
+              <a href={projectData.code_link} target="_blank" rel="noopener noreferrer nofollow" title={`Go to ${projectData.name} code repository`}>&lt;code&gt;</a>
                 <a href={projectData.deployed_link} target="_blank" rel="noopener noreferrer nofollow" title={`Go to ${projectData.name} deployed site`}>&lt;live&gt;</a>
               </div>
               <ul className={utilStyles.flexrow}>
@@ -47,12 +48,19 @@ export default function Project({ projectData }) {
           ))}
               </ul>
           </div>
-          <div className="video-desktop">
-              <video autoPlay="" playsInline="" muted="" loop="" poster="./assets/projects/bechdel.webp" width="100%">
+          {/* <div className="video-desktop"> */}
+              {/* <video autoPlay="" playsInline="" muted="" loop="" poster="./assets/projects/bechdel.webp" width="100%">
                   <source src="./assets/projects/bechdel.mp4" type="video/mp4"></source>
                   Sorry, your browser doesn't support embedded videos.
-              </video>
-          </div>
+              </video> */}
+            <Image
+            src={projectData.gif}
+            // className={utilStyles.borderCircle}
+            height={300}
+            width={300}
+            alt={projectData.name}
+        />
+          {/* </div> */}
           </article>
     </Layout>
   )

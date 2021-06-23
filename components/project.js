@@ -52,9 +52,9 @@ export default function ProjectThumbnail(props) {
       <>
       <Image
           src={props.thumbnail}
-          className={utilStyles.borderCircle}
-          height={144}
-          width={144}
+          // className={utilStyles.borderCircle}
+          height={300}
+          width={300}
           alt={props.name}
       />
       </>

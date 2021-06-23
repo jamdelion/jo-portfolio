@@ -25,16 +25,14 @@ export default function Work({ allProjectsData }) {
          
             <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
                <h2 className={utilStyles.headingLg}>Projects</h2>
-                  <ul className={utilStyles.list}>
+                  <ul className={`${utilStyles.list} ${utilStyles.grid}`}>
                {/* thumbnail of picture with overlay of  tech stack icons */}
                {allProjectsData.map(({ id, techstack, name, thumbnail }) => (
                   
                      <li className={utilStyles.listItem} key={id}>
-                     <Link href={`/projects/${id}`}>
-                        <a>{name}</a>
-                     </Link>
-                        <br />
-                        <ProjectThumbnail thumbnail={thumbnail} name={name}></ProjectThumbnail>
+                        <Link href={`/projects/${id}`}>
+                           <a>{<ProjectThumbnail thumbnail={thumbnail} name={name}></ProjectThumbnail>}</a>
+                        </Link>
                      </li>
                   ))}
                </ul>

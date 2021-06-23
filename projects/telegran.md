@@ -2,12 +2,11 @@
 name: 'TeleGran'
 date: '2021-06-11'
 techstack: ['javascript', 'react', 'express', 'heroku', 'netlify', 'cypress', 'styled-components']
-role: 'Software Developer and QA Lead'
-backend_link: 'https://github.com/fac21/final-project-telegran'
-frontend_link: 'https://github.com/fac21/final-project-telegran'
+role: 'Software Developer and UX Lead'
+code_link: 'https://github.com/fac21/final-project-telegran'
 deployed_link: 'https://telegran.netlify.app/'
-path_to_gif: '#'
-thumbnail: '/images/profile.jpg'
+gif: '/gifs/telegran.gif'
+thumbnail: '/images/telegran.png'
 ---
 
 A communication tool for the elderly, built in React and serving message data from Slack. 
