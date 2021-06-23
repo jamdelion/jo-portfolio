@@ -5,6 +5,7 @@ import Date from '../../components/date'
 import utilStyles from '../../styles/utils.module.css'
 import Icon from '../../components/tech-icon'
 import styles from '../../components/project.module.css'
+import Link from 'next/link'
 
 export async function getStaticProps({ params }) {
   const projectData = await getFileData(params.id, projectsDirectory)
@@ -36,9 +37,9 @@ export default function Project({ projectData }) {
               <div className={styles.project_summary} dangerouslySetInnerHTML={{ __html: projectData.contentHtml }} />
                 
               <div className={styles.project_links}>
-              <a href="{projectData.backend_link}" target="_blank" rel="noopener noreferrer nofollow" title={`Go to ${projectData.name} backend repository`}>&lt;BE code&gt;</a>
-                <a href="{projectData.frontend_link}" target="_blank" rel="noopener noreferrer nofollow" title={`Go to ${projectData.name} frontend repository`}>&lt;FE code&gt;</a>
-                <a href="{projectData.deployed_link}" target="_blank" rel="noopener noreferrer nofollow" title={`Go to ${projectData.name} deployed site`}>&lt;live&gt;</a>
+              <a href={projectData.backend_link} target="_blank" rel="noopener noreferrer nofollow" title={`Go to ${projectData.name} backend repository`}>&lt;BE code&gt;</a>
+                <a href={projectData.frontend_link} target="_blank" rel="noopener noreferrer nofollow" title={`Go to ${projectData.name} frontend repository`}>&lt;FE code&gt;</a>
+                <a href={projectData.deployed_link} target="_blank" rel="noopener noreferrer nofollow" title={`Go to ${projectData.name} deployed site`}>&lt;live&gt;</a>
               </div>
               <ul className={utilStyles.flexrow}>
                   {projectData.techstack.map((tech) => (
