@@ -52,15 +52,27 @@
 }
 
 .viewheight {
-    min-height: 100vh;
+  min-height: 100vh;
 }
 
 .flexrow {
-    display: flex;
+  display: flex;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   gap: 1rem;
+}
+
+.relative {
+  position: relative;
+}
+
+.faded {
+  opacity: 0.4;
+}
+
+.invisible {
+  opacity: 0;
 }
