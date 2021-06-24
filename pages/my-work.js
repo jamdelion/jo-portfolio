@@ -30,6 +30,7 @@ export default function Work({ allProjectsData }) {
             <li className={utilStyles.listItem} key={id}>
               <Link href={`/projects/${id}`}>
                 <a>
+                  {/* {name} */}
                   {
                     <ProjectThumbnail
                       thumbnail={thumbnail}
