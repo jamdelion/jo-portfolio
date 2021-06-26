@@ -1,15 +1,29 @@
 .container {
-  max-width: 36rem;
-  padding: 0 1rem;
+  /* max-width: 36rem; */
+  /* padding: 0 1rem;
   margin: 3rem auto 6rem;
+  display: flex; */
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  /* grid-template-rows: */
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
 }
 
 .header {
-  display: flex;
-  flex-direction: column;
   align-items: center;
 }
 
 .backToHome {
   margin: 3rem 0 0;
+}
+
+.sidebar {
+  grid-area: 1 / 1 / 2 / 2;
+  align-items: center;
+  padding-right: 2rem;
+}
+
+.content {
+  grid-area: 1 / 2 / 2 / 4;
 }

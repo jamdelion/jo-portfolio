@@ -59,6 +59,11 @@
   display: flex;
 }
 
+.flexcolumn {
+  display: flex;
+  flex-direction: column;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
