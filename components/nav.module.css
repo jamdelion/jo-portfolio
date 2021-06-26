@@ -1,9 +1,10 @@
 .navbar {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .navbar__item {
-    color: hotpink;
-    text-decoration: underline;
+  color: hotpink;
+  text-decoration: underline;
 }

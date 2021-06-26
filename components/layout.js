@@ -3,6 +3,7 @@ import Image from "next/image";
 import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
+import Nav from "../components/nav";
 
 const name = "Jo";
 export const siteTitle = "Jo Humphrey | Developer";
@@ -27,51 +28,21 @@ export default function Layout({ children, home }) {
       </Head>
       <aside className={`${utilStyles.flexcolumn} ${styles.sidebar}`}>
         <header className={`${utilStyles.flexcolumn} ${styles.header}`}>
-          {home ? (
-            <>
-              <Image
-                priority
-                src='/images/profile.jpg'
-                className={utilStyles.borderCircle}
-                height={144}
-                width={144}
-                alt={name}
-              />
-              <h1 className={utilStyles.heading2Xl}>{name}</h1>
-            </>
-          ) : (
-            <>
-              <Link href='/'>
-                <a>
-                  <Image
-                    priority
-                    src='/images/profile.jpg'
-                    className={utilStyles.borderCircle}
-                    height={108}
-                    width={108}
-                    alt={name}
-                  />
-                </a>
-              </Link>
-              <h2 className={utilStyles.headingLg}>
-                <Link href='/'>
-                  <a className={utilStyles.colorInherit}>{name}</a>
-                </Link>
-              </h2>
-            </>
-          )}
+          <Image
+            priority
+            src='/images/profile.jpg'
+            className={utilStyles.borderCircle}
+            height={144}
+            width={144}
+            alt={name}
+          />
+          <h1 className={utilStyles.heading2Xl}>{name}</h1>
         </header>
-        <nav>
-          <ul>
-            <li> Example nav item</li>
-            <li> Example nav item</li>
-            <li> Example nav item</li>
-            <li> Example nav item</li>
-          </ul>
-        </nav>
+        <Nav></Nav>
         <div>Social media icons here</div>
       </aside>
       <main className={styles.content}>{children}</main>
+      <div className={styles.picture}>Picture here</div>
       {!home && (
         <div className={styles.backToHome}>
           <Link href='/'>

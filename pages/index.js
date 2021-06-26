@@ -1,18 +1,18 @@
-import Head from 'next/head'
-import Layout, { siteTitle } from '../components/layout'
-import Nav from '../components/nav'
-import utilStyles from '../styles/utils.module.css'
-import { getSortedData, postsDirectory } from '../lib/markdown-files'
-import Link from 'next/link'
-import Date from '../components/date'
+import Head from "next/head";
+import Layout, { siteTitle } from "../components/layout";
+import Nav from "../components/nav";
+import utilStyles from "../styles/utils.module.css";
+import { getSortedData, postsDirectory } from "../lib/markdown-files";
+import Link from "next/link";
+import Date from "../components/date";
 
 export async function getStaticProps() {
-  const allPostsData = getSortedData(postsDirectory)
+  const allPostsData = getSortedData(postsDirectory);
   return {
     props: {
-      allPostsData
-    }
-  }
+      allPostsData,
+    },
+  };
 }
 
 export default function Home({ allPostsData }) {
@@ -24,12 +24,12 @@ export default function Home({ allPostsData }) {
       <section className={utilStyles.headingMd}>
         <p>Hi, my name is Jo.</p>
         <p>
-          (This is a work in progress - for now, please check out {' '}
-          <a href="https://www.github.com/jamdelion">my GitHub</a>.)
+          (This is a work in progress - for now, please check out{" "}
+          <a href='https://www.github.com/jamdelion'>my GitHub</a>.)
         </p>
-        <Nav></Nav>
+        {/* <Nav></Nav> */}
       </section>
-       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
@@ -42,10 +42,9 @@ export default function Home({ allPostsData }) {
                 <Date dateString={date} />
               </small>
             </li>
-
           ))}
         </ul>
       </section>
     </Layout>
-  )
+  );
 }
