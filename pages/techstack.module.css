@@ -25,6 +25,6 @@
 }
 
 .techstack__listitem svg {
-  fill: var(--accent-color-dark);
+  fill: var(--popColour);
   height: 2rem;
 }

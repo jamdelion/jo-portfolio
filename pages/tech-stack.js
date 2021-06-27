@@ -11,7 +11,7 @@ export default function Stack() {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className={utilStyles.viewheight}>
+      <section>
         <h1>Tech Stack</h1>
         {/* <h3 className="page__subtitle page__titles section-padding">Tech Stack</h3> */}
         <ul className={styles.techstack__list}>

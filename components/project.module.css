@@ -29,9 +29,11 @@
 }
 
 .project_links a {
+  /* <code> and <live> button */
   background-color: var(--accentColor);
   padding: 0.5rem;
   border-radius: 3px;
+  margin: 0.15rem;
   /* transition: font 0.3s ease-out; */
 }
 

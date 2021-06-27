@@ -22,12 +22,11 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        <p>Hi, my name is Jo.</p>
+        <p className={utilStyles.headingXl}>Hi, my name is Jo. 👋 </p>
         <p>
           (This is a work in progress - for now, please check out{" "}
           <a href='https://www.github.com/jamdelion'>my GitHub</a>.)
         </p>
-        {/* <Nav></Nav> */}
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>

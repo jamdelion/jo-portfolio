@@ -29,15 +29,19 @@ export default function Layout({ children, home, pic }) {
       </Head>
       <aside className={`${utilStyles.flexcolumn} ${styles.sidebar}`}>
         <header className={`${utilStyles.flexcolumn} ${styles.header}`}>
-          <Image
-            priority
-            src='/images/profile.jpg'
-            className={utilStyles.borderCircle}
-            height={144}
-            width={144}
-            alt={name}
-          />
-          <h1 className={utilStyles.heading2Xl}>{name}</h1>
+          <Link href='/'>
+            <a className={utilStyles.center}>
+              <Image
+                priority
+                src='/images/profile.jpg'
+                className={utilStyles.borderCircle}
+                height={144}
+                width={144}
+                alt={name}
+              />
+              <h1 className={utilStyles.heading2Xl}>{name}</h1>
+            </a>
+          </Link>
         </header>
         <Nav></Nav>
         <div className={utilStyles.flexrow}>

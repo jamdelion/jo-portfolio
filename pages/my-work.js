@@ -3,8 +3,6 @@ import ProjectThumbnail from "../components/project-thumbnail";
 import utilStyles from "../styles/utils.module.css";
 import { getSortedData, projectsDirectory } from "../lib/markdown-files";
 import Link from "next/link";
-import Date from "../components/date";
-import Image from "next/image";
 
 export async function getServerSideProps() {
   const allProjectsData = getSortedData(projectsDirectory);
@@ -19,9 +17,6 @@ export default function Work({ allProjectsData }) {
   return (
     <Layout>
       <h1>My Work</h1>
-      {/* <Project project_name={"TeleGran"}></Project>
-         <Project project_name={"Grinder"}></Project> */}
-      ---
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Projects</h2>
         <ul className={`${utilStyles.list} ${utilStyles.grid}`}>

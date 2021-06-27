@@ -69,19 +69,6 @@ export default function Project({ projectData }) {
             ))}
           </ul>
         </div>
-        {/* <div className="video-desktop"> */}
-        {/* <video autoPlay="" playsInline="" muted="" loop="" poster="./assets/projects/bechdel.webp" width="100%">
-                  <source src="./assets/projects/bechdel.mp4" type="video/mp4"></source>
-                  Sorry, your browser doesn't support embedded videos.
-              </video> */}
-        {/* <Image
-            src={projectData.gif}
-            // className={utilStyles.borderCircle}
-            height={300}
-            width={300}
-            alt={projectData.name}
-        /> */}
-        {/* </div> */}
       </article>
     </Layout>
   );

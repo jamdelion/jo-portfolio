@@ -5,6 +5,6 @@
 }
 
 .navbar__item {
-  color: hotpink;
+  color: var(--otherFontColor);
   text-decoration: underline;
 }

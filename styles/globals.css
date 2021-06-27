@@ -1,10 +1,19 @@
 :root {
   font-family: "Roboto", sans-serif;
-  --fontColor: black;
-  --background: #041549;
+  /* --fontColor: black;
+  --background: rebeccapurple; */
+  /* --background: #041549; */
   /* --accentColor: hsl(331, 100%, 58%); */
-  --accentColor: skyblue;
-  color: var(--fontColor);
+  /* --accentColor: skyblue; */
+  color: var(--mainFontColor);
+
+  --mainFontColor: #e8e9f3;
+  --otherFontColor: #d7d8ea;
+  --accentColor: #ff4301;
+  --darkestBackground: #1b1b1e;
+  --darkBackground: #27272b;
+  --lightBackground: #3a3a40;
+  --popColour: #ff4301;
 }
 
 html,
