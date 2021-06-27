@@ -50,7 +50,11 @@ export default function Layout({ children, home, pic }) {
         </div>
       </aside>
       <main className={styles.content}>{children}</main>
-      {pic && <div className={styles.picture}>Picture here</div>}
+      {pic && (
+        <div className={styles.picture}>
+          <Image src={pic} height={400} width={400} alt={pic} />
+        </div>
+      )}
       {!home && (
         <div className={styles.backToHome}>
           <Link href='/'>
