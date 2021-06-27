@@ -6,7 +6,7 @@ import Link from "next/link";
 import Date from "../components/date";
 import Image from "next/image";
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const allProjectsData = getSortedData(projectsDirectory);
   return {
     props: {

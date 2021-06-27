@@ -4,6 +4,7 @@ import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
 import Nav from "../components/nav";
+import Icon from "../components/tech-icon";
 
 const name = "Jo";
 export const siteTitle = "Jo Humphrey | Developer";
@@ -39,7 +40,14 @@ export default function Layout({ children, home, pic }) {
           <h1 className={utilStyles.heading2Xl}>{name}</h1>
         </header>
         <Nav></Nav>
-        <div>Social media icons here</div>
+        <div className={utilStyles.flexrow}>
+          <a href='https://www.linkedin.com/in/jo-humphrey/'>
+            <Icon name={""} id='linkedin-icon'></Icon>
+          </a>
+          <a href='https://github.com/jamdelion'>
+            <Icon name={""} id='github-icon'></Icon>
+          </a>
+        </div>
       </aside>
       <main className={styles.content}>{children}</main>
       {pic && <div className={styles.picture}>Picture here</div>}
