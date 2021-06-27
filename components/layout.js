@@ -8,7 +8,7 @@ import Nav from "../components/nav";
 const name = "Jo";
 export const siteTitle = "Jo Humphrey | Developer";
 
-export default function Layout({ children, home }) {
+export default function Layout({ children, home, pic }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -42,7 +42,7 @@ export default function Layout({ children, home }) {
         <div>Social media icons here</div>
       </aside>
       <main className={styles.content}>{children}</main>
-      <div className={styles.picture}>Picture here</div>
+      {pic && <div className={styles.picture}>Picture here</div>}
       {!home && (
         <div className={styles.backToHome}>
           <Link href='/'>

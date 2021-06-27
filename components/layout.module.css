@@ -4,7 +4,7 @@
     "a d d d d d d"
     "a b b b c c c"
     "a b b b c c c";
-  grid-template-columns: 250px 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 250px 1fr 1fr 1fr auto;
   grid-template-rows: 150px 1fr auto;
   grid-gap: 15px;
   height: 100vh;
@@ -24,6 +24,7 @@
   align-items: center;
   padding-right: 2rem;
   background-color: rebeccapurple;
+  /* justify-content: space-between; */
 }
 
 .content {
@@ -32,4 +33,5 @@
 
 .picture {
   grid-area: c;
+  background-color: skyblue;
 }

@@ -11,7 +11,7 @@ export default function ProjectThumbnail(props) {
 
   return (
     <div
-      className={utilStyles.relative}
+      className={styles.project_container}
       onMouseEnter={() => {
         setFadedState(true);
         setInvisibleState(false);

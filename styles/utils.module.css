@@ -45,6 +45,7 @@
 
 .listItem {
   margin: 0 0 1.25rem;
+  height: 100%;
 }
 
 .lightText {
@@ -66,8 +67,10 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 300px));
+  /* the max needs to be the dimensions of the image */
   gap: 1rem;
+  grid-template-rows: 300px;
 }
 
 .relative {
@@ -79,5 +82,6 @@
 }
 
 .invisible {
-  opacity: 0;
+  display: none;
+  /* change this to be more accessible? */
 }
